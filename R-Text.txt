@@ -1,2 +1,4 @@
 Push Test
 pull Test
+
+コミットできたのを確認できたよ by m
