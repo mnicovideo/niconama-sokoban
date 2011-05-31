@@ -65,7 +65,8 @@ var x = {
     'object'    :"{}",
     'array'     :"[]",
     'null'      :"null",
-    'instance'  :"new Date()"
+    'instance'  :"new Date()",
+    'RegExp'    :"new RegExp()"
 };
 for(var p in x){
     console.log(p);
