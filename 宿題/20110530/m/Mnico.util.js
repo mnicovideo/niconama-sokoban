@@ -25,6 +25,9 @@ Mnico.util = {
     isObject:function(o){
             return typeof(o)==='object';
         },
+    isObjectNotArrayNull:function(o){
+            return (typeof(o)==='object' && this.kind(o)!=='array' && this.kind(o)!=='null');
+        },
     isArray:function(o){
             return this.kind(o)==='array';
         },
@@ -61,7 +64,8 @@ var x = {
     'undefined' :"",
     'object'    :"{}",
     'array'     :"[]",
-    'null'      :"null"
+    'null'      :"null",
+    'instance'  :"new Date()"
 };
 for(var p in x){
     console.log(p);
