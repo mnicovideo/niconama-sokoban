@@ -8,13 +8,13 @@ var Mnico = {};
  */
 Mnico.util = {
     isNumber:function(o){
-            return typeof(o)==='number';
+            return typeof(o)==='number' || o instanceof Number;
         },
     isString:function(o){
-            return typeof(o)==='string';
+            return typeof(o)==='string' || o instanceof String;
         },
     isBoolean:function(o){
-            return typeof(o)==='boolean';
+            return typeof(o)==='boolean' || o instanceof Boolean;
         },
     isFunction:function(o){
             return typeof(o)==='function';
@@ -25,8 +25,8 @@ Mnico.util = {
     isObject:function(o){
             return typeof(o)==='object';
         },
-    isObjectNotArrayNull:function(o){
-            return (typeof(o)==='object' && this.kind(o)!=='array' && this.kind(o)!=='null');
+    isObject2:function(o){
+            return (typeof(o)==='number' && typeof(o)==='string' && typeof(o)==='boolean' && typeof(o)==='object' && this.kind(o)!=='array' && this.kind(o)!=='null');
         },
     isArray:function(o){
             return this.kind(o)==='array';
@@ -66,7 +66,12 @@ var x = {
     'array'     :"[]",
     'null'      :"null",
     'instance'  :"new Date()",
-    'RegExp'    :"new RegExp()"
+    'RegExp'    :"new RegExp()",
+    'numberOjbect':"new Number(0)",
+    'stringObject':"new String('a')",
+    'booleanObject':"new Boolean(true)",
+    'arrayObject':"new Array()",
+    'array2'     :"[]"
 };
 for(var p in x){
     console.log(p);
