@@ -26,7 +26,7 @@ Mnico.util = {
             return typeof(o)==='object';
         },
     isObject2:function(o){
-            return (typeof(o)==='number' && typeof(o)==='string' && typeof(o)==='boolean' && typeof(o)==='object' && this.kind(o)!=='array' && this.kind(o)!=='null');
+            return (typeof(o)==='object' && this.kind(o)!=='number' && this.kind(o)!=='string' && this.kind(o)!=='boolean' && this.kind(o)!=='array' && this.kind(o)!=='null');
         },
     isArray:function(o){
             return this.kind(o)==='array';
