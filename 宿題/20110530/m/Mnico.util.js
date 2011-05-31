@@ -10,11 +10,20 @@ Mnico.util = {
     isNumber:function(o){
             return typeof(o)==='number' || o instanceof Number;
         },
+    isPrimitiveNumber:function(o){
+            return typeof(o)==='number';
+        },
     isString:function(o){
             return typeof(o)==='string' || o instanceof String;
         },
+    isPrimitiveString:function(o){
+            return typeof(o)==='string';
+        },
     isBoolean:function(o){
             return typeof(o)==='boolean' || o instanceof Boolean;
+        },
+    isPrimitiveBoolean:function(o){
+            return typeof(o)==='boolean';
         },
     isFunction:function(o){
             return typeof(o)==='function';
