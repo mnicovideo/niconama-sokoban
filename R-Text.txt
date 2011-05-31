@@ -1,6 +1,0 @@
-Push Test
-pull Test
-
-コミットできたのを確認できたよ by m
-俺も確認したよ！！             by S
-なんか変更されてるｗ           by r
