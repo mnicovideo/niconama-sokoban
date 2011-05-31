@@ -1,0 +1,19 @@
+<style>
+*{
+line-height:1.5em;
+}
+</style>
+<script src="Mnico.util.js"></script>
+<script>
+function print(o,o2){
+    document.write(o,'<span style="color:red">'+o2+'</span>','<br/>');
+}
+//テスト
+for(var p in x){
+    print('<strong>'+p+'</strong>','');
+    for(var m in Mnico.util){
+        var f = 'Mnico.util.'+m+'('+x[p]+')';
+        print(f+':', eval(f));
+    }
+}
+</script>
