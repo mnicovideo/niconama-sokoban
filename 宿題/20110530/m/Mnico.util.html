@@ -6,7 +6,10 @@ line-height:1.5em;
 <script src="Mnico.util.js"></script>
 <script>
 function print(o,o2){
-    document.write(o,'<span style="color:red">'+o2+'</span>','<br/>');
+    if(typeof o2 === 'boolean' && o2===true)
+        document.write(o,'<span style="color:blue">'+o2+'</span>','<br/>');
+    else
+        document.write(o,'<span style="color:red">'+o2+'</span>','<br/>');
 }
 //テスト
 for(var p in x){
