@@ -1,23 +1,22 @@
 //ゲームの本体
 (function(global){
 
-    /**
-     * ゲームの本体オブジェクト
-     */
-    var Sokoban = global.Sokoban = function(element, level){
+    var Sokoban = global.Sokoban = $.sub();
 
-        //レベル設定
-        this.level = level || this.level || 0;
+    Sokoban.fn._level = 0;
+    Sokoban.fn.game = null;
 
-        //ゲームスタート
-        this.start = function(){
-            $(element).empty().append(Sokoban.Field.create(this.level));
-            return this;
-        };
-
-        //メソッドチェーン
+    Sokoban.fn.level = function(l){
+        if(l!==undefined)
+            this._level = l;
+        else
+            return this._level;
         return this;
+    };
 
+    Sokoban.fn.start = function(){
+        Sokoban.fn.game = this;
+        $(this).empty().append(this.Field.create(this._level));
     };
 
 })(this);
